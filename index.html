@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Portafolio</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <div class="hero-content fade-in">
+      <h1>Hola, soy <span class="accent">Maria Luz Rodriguez Flores</span></h1>
+      <p class="hero-subtitle">Desarrollador Web Frontend</p>
+      <p class="hero-description">Creo interfaces limpias y funcionales enfocadas en la experiencia del usuario.</p>
+      <a href="#contacto" class="btn btn-primary">Contáctame</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="proyectos" class="proyectos">
+      <div class="container">
+        <h2 class="section-title fade-in">Proyectos</h2>
+        <div class="projects-grid">
+          <article class="project-card fade-in">
+            <div class="project-image">
+              <div class="project-placeholder">1</div>
+            </div>
+            <div class="project-info">
+              <h3>Proyecto Uno</h3>
+              <p>Aplicación web responsive construida con HTML, CSS y JavaScript.</p>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Ver Demo</a>
+                <a href="#" class="btn btn-small btn-outline">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card fade-in">
+            <div class="project-image">
+              <div class="project-placeholder">2</div>
+            </div>
+            <div class="project-info">
+              <h3>Proyecto Dos</h3>
+              <p>Landing page con diseño moderno y animaciones sutiles.</p>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Ver Demo</a>
+                <a href="#" class="btn btn-small btn-outline">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card fade-in">
+            <div class="project-image">
+              <div class="project-placeholder">3</div>
+            </div>
+            <div class="project-info">
+              <h3>Proyecto Tres</h3>
+              <p>Calculadora interactiva con interfaz intuitiva.</p>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Ver Demo</a>
+                <a href="#" class="btn btn-small btn-outline">Código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <div class="container">
+        <h2 class="section-title fade-in">Contacto</h2>
+        <form class="contact-form fade-in" id="contactForm">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            <span class="form-error" id="nombreError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required rows="5" placeholder="Escribe tu mensaje..."></textarea>
+            <span class="form-error" id="mensajeError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+          <div class="form-success" id="formSuccess">Mensaje enviado correctamente. ¡Gracias!</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2026 Tu Nombre. Todos los derechos reservados.</p>
+        <div class="footer-links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
