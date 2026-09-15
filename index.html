@@ -516,6 +516,30 @@
         </form>
       </div>
     </section>
+
+    <section id="practica-js" style="padding: 100px 0; background: var(--color-card-bg);">
+      <div class="container">
+        <h2 class="section-title fade-in">Practica JavaScript Semana 4</h2>
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Practica JavaScript</h3>
+          <p style="color: var(--color-text-light); font-size: 1.05rem; margin-bottom: 32px;">
+            En esta practica estamos usando <strong>variables</strong> en <strong>JavaScript</strong> para manipular el contenido de la pagina de forma dinamica. Los botones de abajo utilizan <code>addEventListener</code>, <code>createElement</code> y <code>appendChild</code> para interactuar con el DOM.
+          </p>
+
+          <p id="textoDinamico" style="font-size: 1.15rem; font-weight: 600; color: var(--color-accent); margin-bottom: 24px; min-height: 30px;">
+            Este es el texto original. Haz clic en el boton para cambiarlo.
+          </p>
+
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+            <button id="btnCambiarTexto" class="btn btn-primary">Cambiar Texto</button>
+            <button id="btnAgregarElemento" class="btn btn-outline">Agregar Elemento</button>
+          </div>
+
+          <ul id="listaDinamica" style="list-style: none; padding: 0; text-align: left; max-width: 400px; margin: 0 auto;">
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -620,6 +644,44 @@
         }
       });
 
+    });
+  </script>
+
+  <script>
+    var textos = [
+      "Este es el texto original. Haz clic en el boton para cambiarlo.",
+      "JavaScript permite cambiar el contenido de una pagina web en tiempo real.",
+      "Las variables almacenan datos que podemos usar y modificar.",
+      "createElement() crea nuevos elementos HTML dinamicamente.",
+      "appendChild() agrega el elemento creado al DOM de la pagina."
+    ];
+    var indiceTexto = 0;
+    var contadorElementos = 1;
+
+    var btnCambiarTexto = document.getElementById("btnCambiarTexto");
+    var btnAgregarElemento = document.getElementById("btnAgregarElemento");
+    var textoDinamico = document.getElementById("textoDinamico");
+    var listaDinamica = document.getElementById("listaDinamica");
+
+    btnCambiarTexto.addEventListener("click", function() {
+      indiceTexto++;
+      if (indiceTexto >= textos.length) {
+        indiceTexto = 0;
+      }
+      textoDinamico.textContent = textos[indiceTexto];
+    });
+
+    btnAgregarElemento.addEventListener("click", function() {
+      var nuevoElemento = document.createElement("li");
+      nuevoElemento.textContent = "Elemento " + contadorElementos + " agregado con JavaScript";
+      nuevoElemento.style.padding = "12px 16px";
+      nuevoElemento.style.marginBottom = "8px";
+      nuevoElemento.style.background = "var(--color-bg)";
+      nuevoElemento.style.borderRadius = "var(--radius)";
+      nuevoElemento.style.border = "1px solid var(--color-border)";
+      nuevoElemento.style.fontSize = "0.95rem";
+      listaDinamica.appendChild(nuevoElemento);
+      contadorElementos++;
     });
   </script>
 </body>
